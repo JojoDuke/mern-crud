@@ -28,8 +28,14 @@ app.get("/getUsers", (req, res) => {
 
 //POST request
 app.post("/createUser", async (req, res) => {
+
+    // Request body/data from frontend and store it as user
     const user = req.body;
+
+    //Create a new user using the body
     const newUser = new UserModel(user);
+
+    //Save user data
     await newUser.save();
 
     res.json(user);
