@@ -26,11 +26,11 @@ function App() {
     })
       .then((res) => {
         alert("User Created");
-        setUsersList([...usersList], {
+        setUsersList([...usersList, {
           name,
           age,
           username,
-        })
+        }])
       })
       .catch((error) => console.log(error.response));
   }
