@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 //MongoDB connection server
-mongoose.connect("mongodb+srv://User0:123@cluster0.etmxs8f.mongodb.net/mern-crud?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://User0:123@cluster0.etmxs8f.mongodb.net/mern-crud?retryWrites=true&w=majority")
 
 //GET request
 app.get("/getUsers", (req, res) => {
